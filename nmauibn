@@ -1,0 +1,9 @@
+def find_uniq(arr):
+    i = iter(arr)
+    a, b, c = next(i), next(i), next(i)
+    if a != b:
+        return a if b == c else b
+    else:
+        while c == a:
+            c = next(i)
+        return c
